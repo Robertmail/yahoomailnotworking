@@ -1,1327 +1,787 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Yahoo Mail Not Working? Fix Loading, Sending & Login Problems</title>
-
-    <meta name="description" content="Yahoo Mail not working? Fix Yahoo email problems including loading errors, login issues, missing emails, sending failures, syncing, and app problems.">
-
-    <meta name="robots" content="index, follow">
-
-    <link rel="canonical" href="https://robertmail.github.io/yahoomailnotworking/">
-
-    <meta name="theme-color" content="#4f46e5">
-
-    <meta property="og:title" content="Yahoo Mail Not Working? Troubleshooting Guide">
-    <meta property="og:description" content="Learn how to fix Yahoo Mail not loading, sending emails, receiving messages, login issues, and app problems.">
-    <meta property="og:type" content="website">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-            color: #263247;
-            background: #f6f8fc;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4f46e5;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        .container {
-            max-width: 1150px;
-            width: 92%;
-            margin: auto;
-        }
-
-        /* HEADER */
-
-        header {
-            background: #ffffff;
-            border-bottom: 1px solid #e8eaf2;
-            padding: 16px 0;
-        }
-
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: 800;
-            color: #3730a3;
-        }
-
-        .logo span {
-            color: #6366f1;
-        }
-
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        nav a {
-            font-size: 14px;
-            font-weight: 600;
-            color: #334155;
-        }
-
-        nav a:hover {
-            color: #4f46e5;
-        }
-
-        /* HERO */
-
-        .hero {
-            background: linear-gradient(135deg, #eef2ff, #f5f3ff, #ffffff);
-            padding: 75px 0;
-        }
-
-        .hero-content {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .hero-label {
-            display: inline-block;
-            background: #e0e7ff;
-            color: #4338ca;
-            border-radius: 50px;
-            padding: 7px 15px;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 43px;
-            line-height: 1.25;
-            color: #172554;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: #475569;
-            margin-bottom: 25px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 25px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 23px;
-            border-radius: 8px;
-            font-weight: 700;
-            transition: 0.2s;
-        }
-
-        .btn-primary {
-            background: #4f46e5;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #3730a3;
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #4338ca;
-            border: 1px solid #c7d2fe;
-        }
-
-        /* SECTIONS */
-
-        section {
-            padding: 60px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            color: #172554;
-            margin-bottom: 15px;
-        }
-
-        .section-intro {
-            max-width: 800px;
-            margin: 0 auto 35px;
-            text-align: center;
-            color: #64748b;
-            font-size: 16px;
-        }
-
-        .content-box {
-            background: #ffffff;
-            border: 1px solid #e8eaf2;
-            border-radius: 14px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03);
-        }
-
-        h2 {
-            font-size: 27px;
-            line-height: 1.4;
-            color: #1e293b;
-            margin-bottom: 18px;
-        }
-
-        h3 {
-            color: #334155;
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
-
-        p {
-            margin-bottom: 16px;
-        }
-
-        ul, ol {
-            padding-left: 23px;
-            margin-bottom: 18px;
-        }
-
-        li {
-            margin-bottom: 9px;
-        }
-
-        /* QUICK FIXES */
-
-        .quick-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .quick-card {
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 13px;
-            border: 1px solid #e5e7eb;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .quick-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.07);
-        }
-
-        .quick-card .icon {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .quick-card h3 {
-            font-size: 19px;
-        }
-
-        .quick-card p {
-            font-size: 15px;
-            color: #64748b;
-            margin-bottom: 10px;
-        }
-
-        .quick-card a {
-            font-weight: 700;
-            font-size: 14px;
-        }
-
-        /* ALERT */
-
-        .notice {
-            background: #eff6ff;
-            border-left: 4px solid #3b82f6;
-            border-radius: 7px;
-            padding: 18px;
-            margin: 20px 0;
-        }
-
-        .warning {
-            background: #fff7ed;
-            border-left: 4px solid #f97316;
-            border-radius: 7px;
-            padding: 18px;
-            margin: 20px 0;
-        }
-
-        /* STEPS */
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .step {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 23px;
-        }
-
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            background: #eef2ff;
-            color: #4338ca;
-            border-radius: 50%;
-            font-weight: 800;
-            margin-bottom: 12px;
-        }
-
-        /* DEVICE SECTIONS */
-
-        .device-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .device-card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 25px;
-            border: 1px solid #e5e7eb;
-        }
-
-        /* ARTICLE */
-
-        .article-highlight {
-            background: linear-gradient(135deg, #eef2ff, #ffffff);
-            border: 1px solid #c7d2fe;
-            border-radius: 15px;
-            padding: 35px;
-            text-align: center;
-        }
-
-        .article-highlight h2 {
-            color: #3730a3;
-        }
-
-        /* FAQ */
-
-        .faq-item {
-            background: #ffffff;
-            padding: 23px;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-
-        .faq-item h3 {
-            font-size: 18px;
-            color: #1e293b;
-        }
-
-        .faq-item p {
-            margin-bottom: 0;
-            color: #64748b;
-        }
-
-        /* DISCLAIMER */
-
-        .disclaimer {
-            background: #f1f5f9;
-            padding: 25px;
-            border-radius: 10px;
-            font-size: 14px;
-            color: #64748b;
-        }
-
-        /* FOOTER */
-
-        footer {
-            background: #172554;
-            color: #cbd5e1;
-            padding: 35px 0;
-            text-align: center;
-        }
-
-        footer a {
-            color: #ffffff;
-        }
-
-        footer p {
-            margin: 8px 0;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 850px) {
-            .quick-grid,
-            .device-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            h1 {
-                font-size: 35px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .header-inner {
-                flex-direction: column;
-            }
-
-            nav {
-                justify-content: center;
-                gap: 12px;
-            }
-
-            .hero {
-                padding: 50px 0;
-            }
-
-            h1 {
-                font-size: 30px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .section-title {
-                font-size: 26px;
-            }
-
-            h2 {
-                font-size: 23px;
-            }
-
-            .quick-grid,
-            .device-grid,
-            .steps {
-                grid-template-columns: 1fr;
-            }
-
-            .content-box {
-                padding: 22px;
-            }
-
-            section {
-                padding: 40px 0;
-            }
-        }
-    </style>
-
-    <!-- FAQ STRUCTURED DATA -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Why is Yahoo Mail not working?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yahoo Mail may not work because of internet connectivity problems, browser cache, outdated applications, account authentication issues, email synchronization problems, or temporary service interruptions."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is Yahoo Mail not receiving emails?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Check your Spam folder, email filters, blocked senders, mailbox storage, internet connection, and synchronization settings. You can also send yourself a test email."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I fix Yahoo Mail not loading?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Refresh the page, check your internet connection, clear browser cache and cookies, disable browser extensions temporarily, and try opening Yahoo Mail in another browser."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is Yahoo Mail not working on my phone?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yahoo Mail may stop working on your phone because of app updates, network problems, cache issues, authentication problems, or synchronization settings. Update the app and restart your device."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Yahoo Mail down today?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If Yahoo Mail is not working across several devices and internet connections, a service interruption may be possible. Test another browser and network before concluding that Yahoo Mail is down."
-          }
-        }
-      ]
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yahoo Mail Not Working? Fix Loading, Login & Email Problems</title>
+
+<meta name="description" content="Yahoo Mail not working? Learn how to fix Yahoo Mail not loading, login errors, emails not receiving or sending, app issues, and sync problems.">
+
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://robertmail.github.io/yahoomailnotworking/">
+
+<meta property="og:title" content="Yahoo Mail Not Working? Complete Troubleshooting Guide">
+<meta property="og:description" content="Find simple solutions for Yahoo Mail loading, login, sending, receiving, and app problems.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://robertmail.github.io/yahoomailnotworking/">
+<meta property="og:image" content="https://robertmail.github.io/yahoomailnotworking/yahoo-mail-troubleshooting.webp">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yahoo Mail Not Working? Fix Common Email Problems">
+<meta name="twitter:description" content="Troubleshoot Yahoo Mail problems on computers, Android phones, and iPhones.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #25234a;
+    background: #f8f7ff;
+    line-height: 1.7;
+}
+
+a {
+    color: #5424c7;
+    text-decoration: none;
+}
+
+.container {
+    width: 92%;
+    max-width: 1160px;
+    margin: auto;
+}
+
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(65, 35, 140, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: #4315ad;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+nav a {
+    color: #25234a;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.chat-button,
+.primary-button {
+    display: inline-block;
+    background: #5424d5;
+    color: #fff;
+    padding: 12px 23px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero {
+    background: linear-gradient(120deg, #eee7ff, #ffffff, #e9eaff);
+    padding: 55px 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 1.13;
+    color: #21105d;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: #7826d8;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 22px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    display: block;
+}
+
+section {
+    padding: 48px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 31px;
+    color: #21105d;
+    margin-bottom: 10px;
+}
+
+.section-intro {
+    text-align: center;
+    color: #66617c;
+    margin: 0 auto 28px;
+    max-width: 760px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e7ddff;
+    border-radius: 14px;
+    padding: 23px;
+    box-shadow: 0 5px 18px rgba(70, 35, 140, 0.05);
+}
+
+.card h3 {
+    color: #4215a8;
+    margin-bottom: 9px;
+    font-size: 19px;
+}
+
+.card p {
+    color: #5c5870;
+    font-size: 15px;
+}
+
+.content-section {
+    background: #fff;
+}
+
+.article {
+    max-width: 900px;
+    margin: auto;
+}
+
+.article h2 {
+    color: #321080;
+    font-size: 27px;
+    margin: 32px 0 12px;
+    line-height: 1.3;
+}
+
+.article h3 {
+    color: #4c22a6;
+    font-size: 20px;
+    margin: 22px 0 8px;
+}
+
+.article p {
+    margin-bottom: 14px;
+    color: #454158;
+}
+
+.article ul,
+.article ol {
+    padding-left: 25px;
+    margin: 10px 0 20px;
+}
+
+.article li {
+    margin-bottom: 8px;
+}
+
+.tip {
+    background: #f1edff;
+    border-left: 4px solid #6734d5;
+    padding: 17px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.keyword-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.keyword-grid a {
+    display: block;
+    background: #f4f0ff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.faq-item {
+    background: #fff;
+    padding: 19px;
+    margin: 12px 0;
+    border: 1px solid #e9e1fa;
+    border-radius: 10px;
+}
+
+.faq-item h3 {
+    color: #4215a8;
+    margin-bottom: 7px;
+}
+
+.cta {
+    text-align: center;
+    background: linear-gradient(120deg, #4011ad, #7629d7);
+    color: white;
+    padding: 45px 20px;
+    border-radius: 16px;
+}
+
+.cta h2 {
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 20px;
+}
+
+.cta .primary-button {
+    background: white;
+    color: #4814b8;
+}
+
+.disclaimer {
+    background: #f0edfa;
+    padding: 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+footer {
+    background: #211052;
+    color: white;
+    padding: 28px 0;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    margin: 0 8px;
+}
+
+@media(max-width: 800px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
     }
-    </script>
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        gap: 12px;
+    }
+}
+
+@media(max-width: 560px) {
+    .navbar {
+        flex-direction: column;
+        padding: 14px 0;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards,
+    .keyword-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 35px 0;
+    }
+
+    section {
+        padding: 35px 0;
+    }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Yahoo Mail Troubleshooting Guide",
+  "url": "https://robertmail.github.io/yahoomailnotworking/",
+  "description": "Independent informational guides for troubleshooting common Yahoo Mail problems."
+}
+</script>
 
 </head>
 
 <body>
 
 <header>
-    <div class="container header-inner">
+<div class="container navbar">
+    <a class="logo" href="#home">Yahoo Mail Guide</a>
 
-        <a href="/" class="logo">
-            Yahoo<span>Mail</span> Guide
-        </a>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+        <a href="#keywords">Email Problems</a>
+        <a href="#faq">FAQ</a>
+    </nav>
 
-        <nav aria-label="Main navigation">
-            <a href="/">Home</a>
-            <a href="#quick-fixes">Quick Fixes</a>
-            <a href="#devices">Devices</a>
-            <a href="#problems">Email Problems</a>
-            <a href="#faq">FAQs</a>
-        </nav>
-
-    </div>
+    <button class="chat-button" onclick="openYahooChat()">Get Help</button>
+</div>
 </header>
 
-<!-- HERO SECTION -->
+<main>
 
-<section class="hero">
-    <div class="container hero-content">
+<!-- HOMEPAGE HERO -->
+<section class="hero" id="home">
+<div class="container hero-grid">
 
-        <span class="hero-label">
-            Yahoo Email Troubleshooting
-        </span>
+<div>
+    <h1>Yahoo Mail <span>Not Working?</span></h1>
 
-        <h1>Yahoo Mail Not Working? Fix Common Email Problems</h1>
+    <p>
+    Is Yahoo Mail not loading, opening, sending emails, or receiving new messages?
+    Explore simple troubleshooting steps to understand and resolve common Yahoo
+    Mail problems on your computer, Android phone, or iPhone.
+    </p>
 
-        <p>
-            Is Yahoo Mail not working, loading, sending emails, or receiving
-            new messages? Find simple troubleshooting solutions for Yahoo Mail
-            login errors, browser problems, mobile app issues, synchronization
-            errors, and connection problems.
-        </p>
+    <button class="primary-button" onclick="openYahooChat()">
+    Chat for Help
+    </button>
+</div>
 
-        <div class="hero-buttons">
+<div>
+    <img
+    class="hero-image"
+    src="yahoo-mail-troubleshooting.webp"
+    alt="Yahoo Mail not working troubleshooting guide showing email problems on a laptop and smartphone">
+</div>
 
-            <a href="#quick-fixes" class="btn btn-primary">
-                Try Quick Fixes
-            </a>
-
-            <a href="#problems" class="btn btn-secondary">
-                Find Your Email Problem
-            </a>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- INTRODUCTION -->
-
-<section>
-    <div class="container">
-
-        <div class="content-box">
-
-            <h2>Why Is Yahoo Mail Not Working?</h2>
-
-            <p>
-                Yahoo Mail is commonly used to send and receive personal emails,
-                business messages, notifications, and important documents.
-                However, users may sometimes experience problems when opening
-                their inbox or accessing their email account.
-            </p>
-
-            <p>
-                If Yahoo Mail is not working today, the problem may be related
-                to your internet connection, browser settings, account security,
-                mobile application, or email synchronization. In some situations,
-                Yahoo Mail may also experience temporary service interruptions.
-            </p>
-
-            <p>
-                Whether Yahoo Mail is not opening, emails are missing, messages
-                are stuck while sending, or the Yahoo Mail app is not working,
-                start with the simple troubleshooting methods below.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 </section>
 
 <!-- QUICK FIXES -->
+<section id="troubleshooting">
+<div class="container">
 
-<section id="quick-fixes">
-    <div class="container">
+<h2 class="section-title">Quick Fixes for Yahoo Mail Not Working</h2>
 
-        <h2 class="section-title">
-            Quick Fixes for Yahoo Mail Not Working
-        </h2>
+<p class="section-intro">
+Start with these basic checks before trying more advanced troubleshooting steps.
+</p>
 
-        <p class="section-intro">
-            Try these basic solutions before changing your account settings.
-            They can help resolve common Yahoo Mail connection, loading,
-            login, and application problems.
-        </p>
+<div class="cards">
 
-        <div class="quick-grid">
+<div class="card">
+<h3>1. Check Internet Connection</h3>
+<p>Make sure your Wi-Fi or mobile data connection is working properly. Try opening another website.</p>
+</div>
 
-            <div class="quick-card">
-                <div class="icon">🌐</div>
+<div class="card">
+<h3>2. Refresh Yahoo Mail</h3>
+<p>Reload your inbox or close and reopen the browser or Yahoo Mail application.</p>
+</div>
 
-                <h3>Check Your Internet</h3>
+<div class="card">
+<h3>3. Clear Browser Cache</h3>
+<p>Clear temporary browser files and cookies if Yahoo Mail is loading incorrectly.</p>
+</div>
 
-                <p>
-                    Make sure Wi-Fi or mobile data is working properly.
-                    Try opening another website.
-                </p>
+<div class="card">
+<h3>4. Check Login Details</h3>
+<p>Confirm that you are entering the correct Yahoo email address and password.</p>
+</div>
 
-                <a href="#internet">
-                    Check connection →
-                </a>
-            </div>
+<div class="card">
+<h3>5. Update Your Browser</h3>
+<p>Install available browser updates to improve compatibility and performance.</p>
+</div>
 
-            <div class="quick-card">
-                <div class="icon">🔄</div>
+<div class="card">
+<h3>6. Check Yahoo Service Status</h3>
+<p>If several features stop working, check whether there is a wider service outage.</p>
+</div>
 
-                <h3>Refresh Yahoo Mail</h3>
-
-                <p>
-                    Reload the inbox to fix temporary loading errors
-                    and webpage display problems.
-                </p>
-
-                <a href="#loading">
-                    Fix loading →
-                </a>
-            </div>
-
-            <div class="quick-card">
-                <div class="icon">🧹</div>
-
-                <h3>Clear Browser Cache</h3>
-
-                <p>
-                    Remove outdated browser data that may prevent
-                    Yahoo Mail from opening correctly.
-                </p>
-
-                <a href="#browser">
-                    Fix browser →
-                </a>
-            </div>
-
-            <div class="quick-card">
-                <div class="icon">📱</div>
-
-                <h3>Update Yahoo Mail App</h3>
-
-                <p>
-                    Install the latest available application update
-                    on your Android phone or iPhone.
-                </p>
-
-                <a href="#devices">
-                    Fix mobile app →
-                </a>
-            </div>
-
-            <div class="quick-card">
-                <div class="icon">🔐</div>
-
-                <h3>Check Your Login</h3>
-
-                <p>
-                    Verify your Yahoo email address, password,
-                    and any account verification requirements.
-                </p>
-
-                <a href="#login">
-                    Fix login →
-                </a>
-            </div>
-
-            <div class="quick-card">
-                <div class="icon">📨</div>
-
-                <h3>Check Email Folders</h3>
-
-                <p>
-                    Look in Spam, Archive, Trash, and other folders
-                    if Yahoo Mail is not receiving emails.
-                </p>
-
-                <a href="#receiving">
-                    Find missing emails →
-                </a>
-            </div>
-
-        </div>
-
-    </div>
+</div>
+</div>
 </section>
 
-<!-- INTERNET CONNECTION -->
+<!-- MAIN ARTICLE -->
+<section class="content-section">
+<div class="container article">
 
-<section id="internet">
-    <div class="container">
+<h2>Why Is Yahoo Mail Not Working?</h2>
 
-        <div class="content-box">
+<p>
+Yahoo Mail may stop working for several reasons, including an unstable internet
+connection, browser cache problems, incorrect account settings, outdated apps,
+or temporary service interruptions. Sometimes the issue affects only one feature,
+such as sending messages, receiving emails, or opening attachments.
+</p>
 
-            <h2>1. Check Your Internet Connection</h2>
+<p>
+Before changing your account settings, identify exactly what is happening.
+For example, check whether Yahoo Mail opens normally but fails to load messages,
+or whether you cannot sign in at all.
+</p>
 
-            <p>
-                A weak or unstable internet connection may prevent Yahoo Mail
-                from loading, refreshing, or synchronizing messages.
-            </p>
+<h2 id="not-loading">How to Fix Yahoo Mail Not Loading</h2>
 
-            <ol>
-                <li>Open another website in your browser.</li>
-                <li>Check your Wi-Fi or mobile data connection.</li>
-                <li>Restart your router if your connection is unstable.</li>
-                <li>Disconnect and reconnect to your network.</li>
-                <li>Try opening Yahoo Mail using another connection.</li>
-            </ol>
+<p>
+If Yahoo Mail is stuck on a loading screen, displays a blank page, or takes too
+long to open, try these steps:
+</p>
 
-            <div class="notice">
-                <strong>Tip:</strong> If Yahoo Mail works using mobile data
-                but not Wi-Fi, the problem may be related to your router,
-                network settings, DNS, or internet provider.
-            </div>
+<ol>
+<li>Check that your internet connection is stable.</li>
+<li>Refresh the Yahoo Mail page.</li>
+<li>Open Yahoo Mail in a private or incognito browser window.</li>
+<li>Clear your browser cache and cookies.</li>
+<li>Temporarily disable browser extensions that may interfere with the page.</li>
+<li>Update your browser and restart it.</li>
+</ol>
 
-        </div>
+<div class="tip">
+<strong>Tip:</strong> If Yahoo Mail works in a private window, a browser extension
+or stored browser data may be causing the problem.
+</div>
 
-    </div>
+<h2 id="login">How to Fix Yahoo Mail Login Problems</h2>
+
+<p>
+Yahoo Mail login problems can occur when the password is incorrect, the account
+requires additional verification, or the browser has stored outdated login data.
+</p>
+
+<ul>
+<li>Check that your email address is typed correctly.</li>
+<li>Make sure Caps Lock is not enabled accidentally.</li>
+<li>Use Yahoo's official Sign-in Helper if you cannot access your account.</li>
+<li>Complete any security verification requested by Yahoo.</li>
+<li>Never share your password or verification code with another person.</li>
+</ul>
+
+<p>
+For account recovery and security-related problems, use the official
+<a href="https://login.yahoo.com/forgot" target="_blank" rel="noopener noreferrer">Yahoo Sign-in Helper</a>.
+</p>
+
+<h2 id="receiving">Yahoo Mail Not Receiving Emails</h2>
+
+<p>
+If new emails are missing from your inbox, check your Spam folder, filters,
+blocked addresses, and available account storage. Also confirm that the sender
+has entered your correct email address.
+</p>
+
+<ol>
+<li>Check the Spam and Trash folders.</li>
+<li>Search for the sender's email address.</li>
+<li>Review your filters and blocked addresses.</li>
+<li>Check whether the sender received a delivery error.</li>
+<li>Ask the sender to send the message again.</li>
+</ol>
+
+<h2 id="sending">Yahoo Mail Not Sending Emails</h2>
+
+<p>
+When Yahoo Mail cannot send messages, the problem may involve an unstable
+connection, an attachment that is too large, an incorrect recipient address,
+or a temporary sending restriction.
+</p>
+
+<ul>
+<li>Check your internet connection.</li>
+<li>Verify the recipient's email address.</li>
+<li>Try sending a short message without attachments.</li>
+<li>Reduce the attachment size if necessary.</li>
+<li>Sign out and sign in again if the problem continues.</li>
+</ul>
+
+<h2 id="android">Yahoo Mail Not Working on Android</h2>
+
+<p>
+If Yahoo Mail is not opening, syncing, or sending messages on an Android phone,
+try the following:
+</p>
+
+<ol>
+<li>Switch between Wi-Fi and mobile data to test the connection.</li>
+<li>Restart your Android phone.</li>
+<li>Update the Yahoo Mail app from Google Play.</li>
+<li>Check the app's notification and background data permissions.</li>
+<li>Review the app's sync settings.</li>
+</ol>
+
+<p>
+If the app continues to crash, check your device's available storage and install
+any pending system updates.
+</p>
+
+<h2 id="iphone">Yahoo Mail Not Working on iPhone or iPad</h2>
+
+<p>
+On an iPhone or iPad, Yahoo Mail issues may be related to app updates, network
+settings, account authentication, or device restrictions.
+</p>
+
+<ul>
+<li>Check your Wi-Fi or cellular data connection.</li>
+<li>Close and reopen the Yahoo Mail app.</li>
+<li>Update the app through the App Store.</li>
+<li>Restart your iPhone or iPad.</li>
+<li>Review notification and account settings.</li>
+</ul>
+
+<h2 id="sync">Yahoo Mail Not Syncing</h2>
+
+<p>
+If your inbox looks different across devices, messages are delayed, or folders
+are not updating, check the connection and synchronization settings on each
+device. Refresh the inbox and make sure you are using the correct Yahoo account.
+</p>
+
+<h2 id="outlook">Yahoo Mail Not Working with Outlook</h2>
+
+<p>
+If Yahoo Mail stops working in Microsoft Outlook, review the account
+authentication and incoming and outgoing mail settings. Use Yahoo's official
+instructions for third-party email applications and follow any security
+verification steps required for your account.
+</p>
+
+<h2 id="attachments">Yahoo Mail Attachments Not Opening or Downloading</h2>
+
+<p>
+If an attachment does not open, check your internet connection, available device
+storage, and browser download settings. Try downloading the file again and use
+a compatible application to open its format. Avoid opening unexpected
+attachments from unknown senders.
+</p>
+
+<h2 id="search">Yahoo Mail Search Not Working</h2>
+
+<p>
+When search results are missing or incomplete, check your spelling and search
+terms. Try searching by the sender's address or subject line. Refresh Yahoo Mail
+and check whether the message is in another folder, such as Spam or Archive.
+</p>
+
+<h2>When Should You Contact Yahoo Support?</h2>
+
+<p>
+If you cannot access your account after trying the basic steps, or you suspect
+unauthorized access, use Yahoo's official account recovery and help resources.
+Do not share passwords, verification codes, or private account information with
+unverified support services.
+</p>
+
+<p>
+Visit the
+<a href="https://help.yahoo.com/" target="_blank" rel="noopener noreferrer">
+official Yahoo Help Center
+</a>
+for account assistance and product information.
+</p>
+
+</div>
 </section>
 
-<!-- LOADING PROBLEMS -->
-
-<section id="loading">
-    <div class="container">
-
-        <div class="content-box">
-
-            <h2>2. Fix Yahoo Mail Not Loading or Opening</h2>
-
-            <p>
-                Yahoo Mail not loading, showing a blank screen, or continuously
-                loading may be caused by temporary browser issues or incorrect
-                website data.
-            </p>
-
-            <h3>Try These Steps</h3>
-
-            <ol>
-                <li>Refresh the Yahoo Mail webpage.</li>
-                <li>Close unnecessary browser tabs.</li>
-                <li>Close and reopen your browser.</li>
-                <li>Open Yahoo Mail in a Private or Incognito window.</li>
-                <li>Try another browser.</li>
-                <li>Clear Yahoo Mail cookies and cached data.</li>
-            </ol>
-
-            <p>
-                If Yahoo Mail works in a private browsing window, browser
-                extensions or stored website data may be causing the issue.
-            </p>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- BROWSER -->
-
-<section id="browser">
-    <div class="container">
-
-        <div class="content-box">
-
-            <h2>3. Fix Yahoo Mail Browser Problems</h2>
-
-            <p>
-                Yahoo email not working in Chrome, Edge, Firefox, or Safari
-                may be related to outdated browser software, cookies,
-                cached files, or extensions.
-            </p>
-
-            <h3>Clear Browser Cache and Cookies</h3>
-
-            <ol>
-                <li>Open your browser settings.</li>
-                <li>Go to Privacy and Security.</li>
-                <li>Find the browsing data deletion option.</li>
-                <li>Select cached files and Yahoo-related cookies.</li>
-                <li>Clear the selected data.</li>
-                <li>Restart your browser and sign in again.</li>
-            </ol>
-
-            <h3>Disable Browser Extensions</h3>
-
-            <p>
-                Temporarily disable ad blockers, privacy extensions,
-                script blockers, or other add-ons. Reload Yahoo Mail
-                after disabling them.
-            </p>
-
-            <h3>Update Your Browser</h3>
-
-            <p>
-                Install available browser updates and restart your browser.
-                Using a supported and updated browser may improve Yahoo Mail
-                compatibility and security.
-            </p>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- EMAIL PROBLEMS -->
-
-<section id="problems">
-    <div class="container">
-
-        <h2 class="section-title">
-            Common Yahoo Mail Problems and Solutions
-        </h2>
-
-        <p class="section-intro">
-            Select the problem that best describes what is happening
-            with your Yahoo email account.
-        </p>
-
-        <div class="steps">
-
-            <div class="step" id="receiving">
-
-                <span class="step-number">01</span>
-
-                <h3>Yahoo Mail Not Receiving Emails</h3>
-
-                <p>
-                    If Yahoo Mail is not receiving emails, check your Spam
-                    folder, blocked senders, filters, mailbox storage,
-                    and internet connection.
-                </p>
-
-                <ul>
-                    <li>Check Spam and Trash folders.</li>
-                    <li>Review your email filters.</li>
-                    <li>Check blocked email addresses.</li>
-                    <li>Send yourself a test email.</li>
-                    <li>Check whether the sender's message was delivered.</li>
-                </ul>
-
-            </div>
-
-            <div class="step" id="sending">
-
-                <span class="step-number">02</span>
-
-                <h3>Yahoo Mail Not Sending Emails</h3>
-
-                <p>
-                    Yahoo Mail sending problems may be caused by network
-                    errors, incorrect recipients, attachments, or
-                    authentication restrictions.
-                </p>
-
-                <ul>
-                    <li>Check your internet connection.</li>
-                    <li>Verify the recipient's email address.</li>
-                    <li>Try sending a message without attachments.</li>
-                    <li>Check Drafts and Outbox.</li>
-                    <li>Review any error messages.</li>
-                </ul>
-
-            </div>
-
-            <div class="step" id="login">
-
-                <span class="step-number">03</span>
-
-                <h3>Yahoo Mail Login Not Working</h3>
-
-                <p>
-                    If you cannot sign in to Yahoo Mail, verify your email
-                    address and password and complete any account
-                    verification request.
-                </p>
-
-                <ul>
-                    <li>Check your Yahoo username.</li>
-                    <li>Enter your password carefully.</li>
-                    <li>Check Caps Lock.</li>
-                    <li>Complete verification if requested.</li>
-                    <li>Use Yahoo account recovery if necessary.</li>
-                </ul>
-
-            </div>
-
-            <div class="step" id="sync">
-
-                <span class="step-number">04</span>
-
-                <h3>Yahoo Mail Not Syncing</h3>
-
-                <p>
-                    Email synchronization problems can prevent messages
-                    from appearing on your phone, computer, or
-                    third-party email application.
-                </p>
-
-                <ul>
-                    <li>Check your inbox through a browser.</li>
-                    <li>Update your email application.</li>
-                    <li>Check synchronization settings.</li>
-                    <li>Restart your device.</li>
-                    <li>Reconnect your Yahoo account if necessary.</li>
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- DEVICES -->
-
-<section id="devices">
-    <div class="container">
-
-        <h2 class="section-title">
-            Yahoo Mail Not Working on Different Devices
-        </h2>
-
-        <p class="section-intro">
-            Mobile and desktop email problems may require different
-            troubleshooting methods depending on your device.
-        </p>
-
-        <div class="device-grid">
-
-            <div class="device-card">
-
-                <h3>Yahoo Mail Not Working on Android</h3>
-
-                <p>
-                    If Yahoo Mail is not working on Android, check your
-                    network connection, application updates, and
-                    synchronization settings.
-                </p>
-
-                <ul>
-                    <li>Update Yahoo Mail in Google Play.</li>
-                    <li>Restart your Android phone.</li>
-                    <li>Clear the app cache.</li>
-                    <li>Check account synchronization.</li>
-                    <li>Sign in again if necessary.</li>
-                </ul>
-
-            </div>
-
-            <div class="device-card">
-
-                <h3>Yahoo Mail Not Working on iPhone</h3>
-
-                <p>
-                    Yahoo Mail problems on iPhone may involve app updates,
-                    network settings, authentication, or synchronization.
-                </p>
-
-                <ul>
-                    <li>Check Wi-Fi or cellular data.</li>
-                    <li>Update the Yahoo Mail app.</li>
-                    <li>Restart your iPhone.</li>
-                    <li>Sign out and sign back in.</li>
-                    <li>Reinstall the application if needed.</li>
-                </ul>
-
-            </div>
-
-            <div class="device-card">
-
-                <h3>Yahoo Mail Not Working on Computer</h3>
-
-                <p>
-                    Desktop Yahoo Mail problems may be caused by browser
-                    settings, network issues, cached data, or outdated
-                    software.
-                </p>
-
-                <ul>
-                    <li>Refresh the Yahoo Mail webpage.</li>
-                    <li>Clear browser cache and cookies.</li>
-                    <li>Disable extensions temporarily.</li>
-                    <li>Try another browser.</li>
-                    <li>Restart your computer.</li>
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- OUTLOOK -->
-
-<section>
-    <div class="container">
-
-        <div class="content-box">
-
-            <h2>Yahoo Mail Not Working in Outlook or Other Email Apps</h2>
-
-            <p>
-                If Yahoo Mail is not working in Outlook, Apple Mail,
-                or another third-party email application, the issue
-                may be related to authentication, account connection,
-                or incorrect email server configuration.
-            </p>
-
-            <p>Try these troubleshooting steps:</p>
-
-            <ul>
-                <li>Confirm that Yahoo Mail works in a web browser.</li>
-                <li>Update your third-party email application.</li>
-                <li>Check the account authentication process.</li>
-                <li>Reconnect your Yahoo account.</li>
-                <li>Verify the supported IMAP and SMTP settings.</li>
-                <li>Use an app password if Yahoo requires it for your setup.</li>
-            </ul>
-
-            <p>
-                For IMAP applications, Yahoo's incoming server is commonly
-                <strong>imap.mail.yahoo.com</strong>. The outgoing SMTP server
-                is commonly <strong>smtp.mail.yahoo.com</strong>.
-                Check Yahoo's current requirements before changing
-                your email settings.
-            </p>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- SERVICE STATUS -->
-
-<section>
-    <div class="container">
-
-        <div class="content-box">
-
-            <h2>Is Yahoo Mail Down Today?</h2>
-
-            <p>
-                If Yahoo Mail is not working on multiple devices,
-                the problem may not be related to your personal account.
-                A temporary service interruption could affect email
-                loading, sending, receiving, or login access.
-            </p>
-
-            <p>To identify whether the issue is local or widespread:</p>
-
-            <ol>
-                <li>Try opening Yahoo Mail in another browser.</li>
-                <li>Check Yahoo Mail using another device.</li>
-                <li>Switch between Wi-Fi and mobile data.</li>
-                <li>Look for reports of similar problems.</li>
-                <li>Wait and try again if the problem appears temporary.</li>
-            </ol>
-
-            <div class="warning">
-                <strong>Important:</strong> Do not assume Yahoo Mail is down
-                for everyone just because your inbox is not loading.
-                Test another device and internet connection first.
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- EXISTING DETAILED ARTICLE -->
-
-<section>
-    <div class="container">
-
-        <div class="article-highlight">
-
-            <h2>Need More Detailed Yahoo Mail Troubleshooting?</h2>
-
-            <p>
-                Read our complete troubleshooting guide for step-by-step
-                instructions to fix Yahoo Mail not working, including
-                browser errors, account login problems, missing emails,
-                mobile application issues, and synchronization errors.
-            </p>
-
-            <a href="PASTE-YOUR-EXISTING-ARTICLE-URL-HERE"
-               class="btn btn-primary">
-                Read Complete Yahoo Mail Troubleshooting Guide
-            </a>
-
-        </div>
-
-    </div>
+<!-- SUPPORTING SEARCH TOPICS -->
+<section id="keywords">
+<div class="container">
+
+<h2 class="section-title">More Yahoo Mail Troubleshooting Topics</h2>
+
+<p class="section-intro">
+Explore these common Yahoo email issues and find the relevant troubleshooting section.
+</p>
+
+<div class="keyword-grid">
+<a href="#not-loading">Yahoo Mail not loading</a>
+<a href="#login">Yahoo Mail login problems</a>
+<a href="#receiving">Yahoo Mail not receiving emails</a>
+<a href="#sending">Yahoo Mail not sending emails</a>
+<a href="#android">Yahoo Mail not working on Android</a>
+<a href="#iphone">Yahoo Mail not working on iPhone</a>
+<a href="#sync">Yahoo Mail not syncing</a>
+<a href="#outlook">Yahoo Mail not working with Outlook</a>
+<a href="#attachments">Yahoo Mail attachments not opening</a>
+<a href="#search">Yahoo Mail search not working</a>
+<a href="#not-loading">Yahoo Mail blank screen</a>
+<a href="#login">Yahoo email account access problems</a>
+</div>
+
+</div>
 </section>
 
 <!-- FAQ -->
+<section class="content-section" id="faq">
+<div class="container article">
 
-<section id="faq">
-    <div class="container">
+<h2 class="section-title">Frequently Asked Questions</h2>
 
-        <h2 class="section-title">
-            Frequently Asked Questions
-        </h2>
+<div class="faq-item">
+<h3>1. Why is Yahoo Mail not working today?</h3>
+<p>
+Yahoo Mail may not work because of internet problems, browser issues,
+account settings, or a temporary service interruption. Check your connection
+and try opening Yahoo Mail in another browser.
+</p>
+</div>
 
-        <p class="section-intro">
-            Answers to common questions about Yahoo Mail not working,
-            loading, sending, receiving, and account access.
-        </p>
+<div class="faq-item">
+<h3>2. Why is Yahoo Mail not loading?</h3>
+<p>
+A slow connection, outdated browser, corrupted cache, or browser extension
+may prevent Yahoo Mail from loading. Refresh the page and try clearing
+your browser data.
+</p>
+</div>
 
-        <div class="faq-item">
+<div class="faq-item">
+<h3>3. Why am I not receiving Yahoo emails?</h3>
+<p>
+Check your Spam folder, filters, blocked addresses, and account storage.
+Also confirm that the sender used the correct email address.
+</p>
+</div>
 
-            <h3>Why is Yahoo Mail not working today?</h3>
+<div class="faq-item">
+<h3>4. Why can't I send emails from Yahoo Mail?</h3>
+<p>
+Check your internet connection, recipient address, attachment size, and
+account status. Try sending a simple message without an attachment.
+</p>
+</div>
 
-            <p>
-                Yahoo Mail may not work because of internet connectivity
-                problems, browser errors, account login issues, app
-                synchronization problems, or a temporary service
-                interruption. Test Yahoo Mail on another device
-                and network to identify the cause.
-            </p>
+<div class="faq-item">
+<h3>5. How do I fix Yahoo Mail on my phone?</h3>
+<p>
+Restart your phone, update the Yahoo Mail app, check your network,
+and review the app's permissions and synchronization settings.
+</p>
+</div>
 
-        </div>
+<div class="faq-item">
+<h3>6. Is Yahoo Mail down or is it just my device?</h3>
+<p>
+Try accessing Yahoo Mail from another device or browser. If the same
+problem occurs across multiple devices, a wider service issue may be possible.
+</p>
+</div>
 
-        <div class="faq-item">
-
-            <h3>Why is Yahoo Mail not loading?</h3>
-
-            <p>
-                Yahoo Mail may not load because of browser cache,
-                cookies, extensions, connection problems, or outdated
-                browser software. Refresh the page, clear website data,
-                and try another browser.
-            </p>
-
-        </div>
-
-        <div class="faq-item">
-
-            <h3>Why is Yahoo Mail not receiving emails?</h3>
-
-            <p>
-                Messages may be going into Spam, blocked by a filter,
-                delayed by the sender, or affected by synchronization
-                problems. Check Spam, Trash, blocked senders,
-                and your email filters.
-            </p>
-
-        </div>
-
-        <div class="faq-item">
-
-            <h3>Why is Yahoo Mail not sending emails?</h3>
-
-            <p>
-                Yahoo Mail may fail to send messages because of an
-                internet connection problem, incorrect recipient
-                address, attachment issue, temporary restriction,
-                or authentication error.
-            </p>
-
-        </div>
-
-        <div class="faq-item">
-
-            <h3>How do I fix Yahoo Mail not working on Android?</h3>
-
-            <p>
-                Update the Yahoo Mail app, restart your phone,
-                check the internet connection, clear the application
-                cache, and reconnect your account if necessary.
-            </p>
-
-        </div>
-
-        <div class="faq-item">
-
-            <h3>How do I fix Yahoo Mail not working on iPhone?</h3>
-
-            <p>
-                Update Yahoo Mail through the App Store, restart your
-                iPhone, check Wi-Fi or cellular data, sign in again,
-                and reinstall the app if the problem continues.
-            </p>
-
-        </div>
-
-        <div class="faq-item">
-
-            <h3>Why can't I log in to my Yahoo Mail account?</h3>
-
-            <p>
-                Yahoo login problems may be caused by an incorrect
-                password, account verification requirements, temporary
-                security restrictions, or recovery information issues.
-                Follow the official Yahoo account recovery process.
-            </p>
-
-        </div>
-
-        <div class="faq-item">
-
-            <h3>Why is Yahoo Mail not working in Chrome?</h3>
-
-            <p>
-                Chrome may have outdated cache files, cookies,
-                extensions, or browser settings that interfere
-                with Yahoo Mail. Try Incognito mode, clear Yahoo
-                website data, and update Chrome.
-            </p>
-
-        </div>
-
-        <div class="faq-item">
-
-            <h3>How do I know if Yahoo Mail is down?</h3>
-
-            <p>
-                If Yahoo Mail fails on several devices and internet
-                connections, a wider service problem may be possible.
-                If it works elsewhere, troubleshoot your local
-                browser, application, or account settings.
-            </p>
-
-        </div>
-
-        <div class="faq-item">
-
-            <h3>What should I do if Yahoo Mail keeps loading?</h3>
-
-            <p>
-                Refresh the page, restart your browser, clear cache
-                and cookies, disable browser extensions temporarily,
-                check your connection, and try another browser.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 </section>
 
-<!-- CONCLUSION -->
-
+<!-- FINAL CTA -->
 <section>
-    <div class="container">
+<div class="container">
+<div class="cta">
 
-        <div class="content-box">
+<h2>Still Having Yahoo Mail Problems?</h2>
 
-            <h2>Conclusion</h2>
+<p>
+Explore the troubleshooting steps above or visit Yahoo's official help resources
+for account-related assistance.
+</p>
 
-            <p>
-                Yahoo Mail not working can interrupt important
-                communication, especially when you need to send
-                messages or access your inbox. Most common Yahoo
-                email problems can be investigated by checking
-                the internet connection, refreshing the website,
-                updating the application, clearing browser data,
-                and reviewing account synchronization.
-            </p>
+<button class="primary-button" onclick="openYahooChat()">
+Open Chat
+</button>
 
-            <p>
-                If Yahoo Mail is not loading on your computer,
-                try another browser. If Yahoo Mail is not working
-                on Android or iPhone, update the app and restart
-                your device. If emails are missing, check Spam,
-                filters, and other folders. If you cannot sign in,
-                use Yahoo's official account recovery options.
-            </p>
+</div>
 
-            <p>
-                Identify the specific problem first and apply the
-                troubleshooting method that matches it. This can
-                help restore Yahoo Mail access without making
-                unnecessary changes to your account.
-            </p>
+<div class="disclaimer">
+<strong>Disclaimer:</strong>
+We are an independent informational and troubleshooting resource.
+We are not affiliated with, authorized by, or endorsed by Yahoo.
+All trademarks belong to their respective owners. For official account
+assistance, security issues, and product support, please visit Yahoo's
+official website.
+</div>
 
-        </div>
-
-    </div>
+</div>
 </section>
 
-<!-- DISCLAIMER -->
-
-<section>
-    <div class="container">
-
-        <div class="disclaimer">
-
-            <h3>Disclaimer</h3>
-
-            <p>
-                We are an independent informational and troubleshooting
-                resource. We are not affiliated with, authorized by,
-                or endorsed by Yahoo. All trademarks belong to their
-                respective owners. For official account assistance,
-                security issues, and product support, please visit
-                Yahoo's official website.
-            </p>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- FOOTER -->
+</main>
 
 <footer>
-    <div class="container">
-
-        <p>
-            <strong>Yahoo Mail Guide</strong>
-        </p>
-
-        <p>
-            Independent information and troubleshooting
-            for common Yahoo email problems.
-        </p>
-
-        <p>
-            © 2026 All Rights Reserved.
-        </p>
-
-    </div>
+<div class="container">
+<p><strong>Yahoo Mail Troubleshooting Guide</strong></p>
+<p>Independent information to help readers understand common email problems.</p>
+<p>
+<a href="#home">Home</a> |
+<a href="#troubleshooting">Troubleshooting</a> |
+<a href="#faq">FAQ</a>
+</p>
+<p>© 2026 Yahoo Mail Guide. All rights reserved.</p>
+</div>
 </footer>
+
+<script>
+function openYahooChat() {
+    if (window.jivo_api &&
+        typeof window.jivo_api.open === "function") {
+        window.jivo_api.open({start: "chat"});
+    }
+}
+
+var yahooChatAutoOpened = false;
+
+function jivo_onLoadCallback() {
+    try {
+        if (sessionStorage.getItem("yahooChatAutoOpened") === "1") {
+            return;
+        }
+    } catch (e) {}
+
+    setTimeout(function() {
+        if (yahooChatAutoOpened) return;
+
+        if (window.jivo_api &&
+            typeof window.jivo_api.open === "function") {
+
+            yahooChatAutoOpened = true;
+
+            try {
+                sessionStorage.setItem("yahooChatAutoOpened", "1");
+            } catch (e) {}
+
+            window.jivo_api.open({start: "chat"});
+        }
+    }, 3000);
+}
+</script>
+
+<script src="//code.jivosite.com/widget/TDM7bFpVw7" async></script>
 
 </body>
 </html>
